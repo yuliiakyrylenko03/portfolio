@@ -192,7 +192,23 @@ const validateInputs = () => {
   } else{
     setSuccess(text);
   }
+  if(isValidEmail(emailValue) && textValue != '' && usernameValue != ''){
+    getElem('.overlay').classList.add('active');
+    getElem('.modal').classList.add('active');
+    form.reset();
+    document.querySelectorAll('.contacts__input').forEach((input)=>{
+        if(input.classList.contains('success')){
+          input.classList.remove('success');}       
+    });
+    if(getElem('.contacts__textarea').classList.contains('success')){
+      getElem('.contacts__textarea').classList.remove('success');
+    }
+  }
 };
+getElem('.modal__close').addEventListener('click', ()=>{
+    getElem('.overlay').classList.remove('active');
+    getElem('.modal').classList.remove('active');
+});
 
 
 
