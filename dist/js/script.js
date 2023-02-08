@@ -59,7 +59,8 @@ TagCanvas.Start('myCanvas','tags',{////animation moving skills using tagcanvas l
   textFont:'Poppins, sans-serif',
   zoomMin: 1,
   zoomMax: 1,
-  outlineMethod:'none'
+  outlineMethod:'none',
+  activeCursor: 'auto'
 });
 function initTypeWriter() {
   let i = 0;///printed text function
